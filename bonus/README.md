@@ -1,36 +1,54 @@
 # Bonus Exercise - Full Chip Design
 
+In order to create a full chip design we need to perform a number of additional steps.
 
-> [!CAUTION]
-> Full chip design with ihp-sg13g2 is currently still WIP.
+- [OpenROAD.PadRing](https://librelane.readthedocs.io/en/stable/reference/step_config_vars.html#step-openroad-padring): Generates the pad ring itself using OpenROAD.
+- [KLayout.SealRing](https://librelane.readthedocs.io/en/stable/reference/step_config_vars.html#step-klayout-sealring): Generates a seal ring around the chip for supported PDKs.
+- [KLayout.Filler](https://librelane.readthedocs.io/en/stable/reference/step_config_vars.html#filler-generation): Generates the filler cells using KLayout for supported PDKs.
+- [Magic.Filler](https://librelane.readthedocs.io/en/stable/reference/step_config_vars.html#step-magic-filler): Generates the filler cells using magic for supported PDKs.
+- [KLayout.Density](https://librelane.readthedocs.io/en/stable/reference/step_config_vars.html#step-klayout-density): Performs a density check on the final GDSII for supported PDKs.
 
-In order to create a full chip design we need to generate a pad ring. LibreLane does not yet have support for automatic pad ring generation. However, we can make use of the experimental [leo/padring](https://github.com/librelane/librelane/tree/leo/padring) branch.
+These steps are part of the LibreLane [Chip](https://librelane.readthedocs.io/en/stable/reference/flows.html#chip) flow.
 
-Instead of invoking `nix-shell` in the root of this repository, invoke `nix-shell` inside of this `bonus/` directory. That will enable the correct LibreLane version.
+The selected flow is specified at the top of the LibreLane configuration file (`config.yaml`).
 
-We also need a custom branch of the IHP Open PDK. Again, we use the branch [leo/padring](https://github.com/mole99/IHP-Open-PDK/tree/leo/padring).
-
-Choose a destination folder and clone the PDK:
-
-```
-git clone https://github.com/mole99/IHP-Open-PDK.git --single-branch -b leo/padring --recurse-submodules
-```
-
-Before we start LibreLane, we need to export `PDK_ROOT` and `PDK`.
-
-```
-export PDK_ROOT=/path/to/pdk && export PDK=ihp-sg13g2
-```
+## Running the Flow
 
 Now just run the flow:
 
 ```
-librelane config.yaml --manual-pdk
+librelane config.yaml --pdk ihp-sg13g2
+```
+
+You should see the antenna checks and LVS passing. DRC is skipped for now.
+
+## Viewing in OpenROAD GUI
+
+Open the design in OpenROAD GUI:
+
+```
+librelane --pdk ihp-sg13g2 config.yaml --last-run --flow OpenInOpenROAD
 ```
 
 The result should be something like this:
 
 ![OpenROAD GUI](img/openroad_1.png)
 
+## Viewing in KLayout
+
+You can also view the chip layout in KLayout:
+
+```
+librelane --pdk ihp-sg13g2 config.yaml --last-run --flow OpenInKLayout
+```
+
+The result should be something like this:
+
+![KLayout](img/klayout_1.png)
+
+## Conclusion
+
 Congrats! 🎉
-Feel free to edit `heichips25_template` to add your own design to the chip.
+You have implemented a full chip design ready for tapeout.
+
+Feel free to edit `src/chip_core.sv` to add your own design to the chip.

@@ -1,9 +1,10 @@
-# HeiChips 2025 LibreLane Workshop
+# HeiChips 2026 LibreLane Workshop
 
-This is the repository for the LibreLane workshop during HeiChips 2025.
+This is the repository for the LibreLane workshop during HeiChips 2026.
 
 You will learn how to use and configure LibreLane, debug your design, integrate macros, and implement a full chip.
 
+- LibreLane website: https://librelane.org
 - LibreLane repository: https://github.com/librelane/librelane
 - LibreLane documentation: https://librelane.readthedocs.io
 
