@@ -1,6 +1,5 @@
 
-# Lab 2 
-# การกำหนดค่า Physical Design ด้วย LibreLane Configuration Variables
+# Lab 2: การกำหนดค่า Physical Design ด้วย LibreLane Configuration Variables
 
 ## 2.1 วัตถุประสงค์ของบทปฏิบัติการ
 
