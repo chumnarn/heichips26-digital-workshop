@@ -80,7 +80,7 @@ librelane --version
 
 ---
 
-### พื้นหลัง: LibreLane คืออะไร?
+### LibreLane คืออะไร?
 
 **LibreLane** คือ open-source ASIC implementation flow ที่แปลง RTL (Register Transfer Level) — โค้ด SystemVerilog/Verilog ที่เราเขียน — ไปเป็น **GDS** (Graphic Design System) ซึ่งเป็นไฟล์ layout ที่ส่งให้โรงงานผลิตชิปได้จริง
 
@@ -475,7 +475,7 @@ run.log          ← log เฉพาะของ step นี้
 
 ---
 
-### พื้นหลัง: Design และ Config เริ่มต้นของ Exercise 2
+### Design และ Config เริ่มต้นของ Exercise 2
 
 Exercise นี้ใช้ design ที่ซับซ้อนกว่า Lab 1 — เป็น **multiplier** ที่ใช้ interface เดียวกับ **Tiny Tapeout** (platform สำหรับ tapeout รวมกลุ่มที่ให้นักศึกษาและ maker ส่ง design ได้ฟรี/ราคาถูก)
 
@@ -967,7 +967,7 @@ FP_OBSTRUCTIONS:
 
 ---
 
-### พื้นหลัง: ทำไมต้องควบคุม Flow?
+### ทำไมต้องควบคุม Flow?
 
 ใน Lab 1–2 เรารัน flow ตั้งแต่ต้นจนจบทุกครั้ง สำหรับ design เล็ก ๆ ที่ใช้เวลา 5–10 นาทีก็ไม่เป็นปัญหา แต่ในงานจริง:
 
@@ -1426,7 +1426,7 @@ librelane --pdk ihp-sg13g2 config.yaml \
 
 ---
 
-### พื้นหลัง: Hard Macro คืออะไรและทำไมต้องใช้?
+### Hard Macro คืออะไรและทำไมต้องใช้?
 
 **Hard macro** คือ block วงจรที่ผ่านกระบวนการ place & route จนได้ GDS layout สมบูรณ์แล้ว — พร้อมใช้เป็น black box ใน design ระดับสูงขึ้นได้ทันที ไม่ต้อง synthesize หรือ route ใหม่
 
@@ -2047,7 +2047,7 @@ FP_PDN_HPITCH: 20
 
 ---
 
-### พื้นหลัง: ทำไมต้องใช้ Python API?
+### ทำไมต้องใช้ Python API?
 
 การรัน `librelane --pdk ihp-sg13g2 config.yaml` จากบรรทัดคำสั่งสะดวกสำหรับการใช้งานทั่วไป แต่มีข้อจำกัดเมื่อต้องการ:
 
@@ -2633,7 +2633,7 @@ class MyAdvancedFlow(Classic):
 
 ---
 
-### พื้นหลัง: ความแตกต่างระหว่าง Classic Flow กับ Chip Flow
+### ความแตกต่างระหว่าง Classic Flow กับ Chip Flow
 
 ใน Lab 1–5 เราใช้ `Classic` flow ซึ่งสร้าง **chip core** — วงจร logic ที่ route เสร็จ แต่ยังไม่สามารถส่งโรงงานผลิตจริงได้ เพราะขาดองค์ประกอบสำคัญ:
 
