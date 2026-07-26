@@ -1,5 +1,6 @@
 
-# Lab 3 การควบคุมขั้นตอนการทำงานของ LibreLane  
+# Lab 3 
+# การควบคุมขั้นตอนการทำงานของ LibreLane  
 ## Controlling the LibreLane Flow
 
 ---
