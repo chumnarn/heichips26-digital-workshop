@@ -1,5 +1,6 @@
 
-# Lab 1: การสร้างวงจร Counter จาก RTL ไปเป็น GDSII ด้วย LibreLane
+# Lab 1 
+# การสร้างวงจร Counter จาก RTL ไปเป็น GDSII ด้วย LibreLane
 
 ## 1. วัตถุประสงค์ของบทปฏิบัติการ
 
