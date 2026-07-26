@@ -1,6 +1,5 @@
 
-# Exercise 4  
-# การสร้างและบูรณาการ Hard Macro ด้วย LibreLane
+# Lab 4: การสร้างและบูรณาการ Hard Macro ด้วย LibreLane
 
 ## 4.1 วัตถุประสงค์ของบทปฏิบัติการ
 
