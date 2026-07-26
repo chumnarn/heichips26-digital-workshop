@@ -1,5 +1,5 @@
 
-# Lab 5 การควบคุม LibreLane ด้วย Python API และการสร้าง Custom Flow
+# Lab 5: การควบคุม LibreLane ด้วย Python API และการสร้าง Custom Flow
 
 ## 5.1 วัตถุประสงค์ของบทปฏิบัติการ
 
